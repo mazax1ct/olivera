@@ -1,0 +1,215 @@
+.button {
+    align-items: center;
+    border: 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.22222;
+    min-height: 44px;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    vertical-align: top;
+    @media(min-width: $fhd) {
+        border-radius: 0.105vw;
+        border-width: 0.105vw;
+        font-size: 0.9375vw;
+        min-height: 2vw;
+        padding: 0.8vw 1.5vw;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.disabled,
+    &:disabled {
+        box-shadow: none;
+        cursor: default;
+        pointer-events: none;
+
+        &:active,
+        &:focus,
+        &:hover {
+            box-shadow: none;
+            text-decoration: none;
+        }
+    }
+
+    &--type_1 {
+        background-color: transparent;
+        color: #fff;
+
+        .arrow-right {
+            stroke: #fff;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: #fff;
+            color: $text-color;
+            text-decoration: none;
+
+            .arrow-right {
+                stroke: $text-color;
+            }
+        }
+
+        &.disabled,
+        &:disabled {
+            border-color: rgba(#fff, 0.5);
+            color: rgba(#fff, 0.5);
+
+            &:active,
+            &:focus,
+            &:hover {
+                border-color: rgba(#fff, 0.5);
+                color: rgba(#fff, 0.5);
+            }
+
+            .arrow-right {
+                stroke: rgba(#fff, 0.5);
+            }
+        }
+    }
+
+    &--type_2 {
+        background-color: transparent;
+        color: $text-color;
+
+        .arrow-right {
+            stroke: $text-color;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $text-color;
+            border-color: $text-color;
+            color: #fff;
+
+            .arrow-right {
+                stroke: #fff;
+            }
+        }
+
+        &.disabled,
+        &:disabled {
+            border-color: rgba($text-color, 0.5);
+            color: rgba($text-color, 0.5);
+
+            &:active,
+            &:focus,
+            &:hover {
+                border-color: rgba($text-color, 0.5);
+                color: rgba($text-color, 0.5);
+            }
+
+            .arrow-right {
+                stroke: rgba($text-color, 0.5);
+            }
+        }
+    }
+
+    &--type_3 {
+        background-color: $bg-light-color;
+        border-color: $bg-light-color;
+        color: $text-color;
+
+        .arrow-right {
+            stroke: $text-color;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $text-color;
+            color: $bg-light-color;
+
+            .arrow-right {
+                stroke: $bg-light-color;
+            }
+        }
+
+        &.disabled,
+        &:disabled {
+            background-color: rgba($bg-light-color, 0.5);
+            border-color: rgba($bg-light-color, 0.5);
+            color: rgba($text-color, 0.5);
+
+            &:active,
+            &:focus,
+            &:hover {
+                background-color: rgba($bg-light-color, 0.5);
+                border-color: rgba($bg-light-color, 0.5);
+                color: rgba($text-color, 0.5);
+            }
+
+            .arrow-right {
+                stroke: rgba($text-color, 0.5);
+            }
+        }
+    }
+
+    &--type_4 {
+        background-color: $text-color;
+        border-color: $text-color;
+        color: #fff;
+
+        .arrow-right {
+            stroke: #fff;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            color: $text-color;
+
+            .arrow-right {
+                stroke: $text-color;
+            }
+        }
+
+        &.disabled,
+        &:disabled {
+            background-color: transparent;
+            border-color: rgba($text-color, 0.5);
+            color: rgba($text-color, 0.5);
+
+            &:active,
+            &:focus,
+            &:hover {
+                background-color: transparent;
+                border-color: rgba($text-color, 0.5);
+                color: rgba($text-color, 0.5);
+            }
+
+            .arrow-right {
+                stroke: rgba($text-color, 0.5);
+            }
+        }
+    }
+
+    .arrow-right {
+        fill: none;
+        height: 9px;
+        min-width: 31px;
+        margin-left: 14px;
+        transition: stroke 0.3s;
+        width: 31px;
+        @media(min-width: $fhd) {
+            width: 1.615vw;
+            min-width: 1.615vw;
+            height: 0.469vw;
+            margin-left: 0.71vw;
+        }
+    }
+}

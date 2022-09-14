@@ -1,0 +1,72 @@
+.bradpitt {
+    background-color: #F9F9F9;
+    display: none;
+    margin-bottom: 36px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @media(min-width: $md) {
+        display: block;
+    }
+    @media(min-width: $fhd) {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    &--titled {
+        display: block;
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 22px 16px;
+        margin-bottom: 22px;
+        @media(min-width: $md) {
+            margin-bottom: 36px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bradpitt__list {
+            @media(max-width: $md - 1px) {
+                display: none;
+            }
+        }
+    }
+
+    &__list {
+        align-items: center;
+        color: #8D8D8D;
+        display: flex;
+        font-size: 14px;
+        flex-wrap: wrap;
+
+        &:not(:first-child) {
+            margin-top: 19px;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 4px;
+
+            &::after {
+                content: ' -';
+            }
+        }
+    }
+
+    &__link {
+        color: #8D8D8D;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    h1 {
+        margin-bottom: 0;
+        @media(min-width: $fhd) {
+            font-size: 24px;
+        }
+    }
+}
