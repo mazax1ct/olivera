@@ -36,7 +36,6 @@
 
     &__left {
         @media(min-width: $md) {
-            max-width: 800px;
             padding-right: 20px;
             width: 60%;
         }
@@ -47,9 +46,14 @@
         padding: 0;
         @media(min-width: $sm) {
             columns: 2;
+            max-width: 460px;
         }
-        @media(min-width: $hd) {
-            columns: 3;
+
+        &--big {
+            @media(min-width: $md) {
+                columns: 3;
+                max-width: 780px;
+            }
         }
     }
 

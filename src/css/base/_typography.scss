@@ -108,6 +108,12 @@ h3 {
             margin-top: 64px;
         }
     }
+
+    &.center {
+        @media(min-width: $md) {
+            text-align: center;
+        }
+    }
 }
 
 hr {
@@ -123,7 +129,6 @@ hr {
 
 ol,
 ul {
-    list-style: none;
     padding: 0;
 
     &:not(:first-child) {
@@ -142,6 +147,8 @@ ul {
 }
 
 ul {
+    list-style: none;
+
     &:not([class]) {
         li {
             padding-left: 20px;
@@ -169,12 +176,24 @@ ul {
     }
 }
 
+ol {
+    list-style-position: inside;
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
 .no-list {
+    list-style: none;
+
     li {
         &:not(:last-child) {
             margin-bottom: 16px;
             @media(min-width: $fhd) {
-                margin-bottom: 0.834vw;
+                margin-bottom: 30px;
             }
         }
     }
@@ -196,8 +215,13 @@ p {
 .wide-image {
     display: block;
     margin: 38px -16px;
+    @media(min-width: $md) {
+        margin-left: auto;
+        margin-right: auto;
+    }
     @media(min-width: $fhd) {
-        margin: 64px auto;
+        margin-top: 64px;
+        margin-bottom: 64px;
     }
 
     &:last-child {
@@ -209,6 +233,75 @@ p {
     }
 
     img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.centered-text {
+    @media(min-width: $md) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1120px;
+        text-align: center;
+    }
+    @media(min-width: $fhd) {
+        font-size: 16px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 22px;
+        @media(min-width: $md) {
+            margin-bottom: 48px;
+        }
+    }
+
+    p {
+        &:not(:last-child) {
+            @media(min-width: $md) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.two-images {
+    @media(min-width: $sm) {
+        display: flex;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    &__item {
+        @media(min-width: $sm) {
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 50%;
+        }
+
+        &:nth-child(2) {
+            @media(max-width: $sm - 1px) {
+                display: none;
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        margin-top: 22px;
+        @media(min-width: $md) {
+            margin-top: 48px;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 22px;
+        @media(min-width: $md) {
+            margin-bottom: 48px;
+        }
+    }
+
+    img,
+    picture {
         display: block;
         width: 100%;
     }

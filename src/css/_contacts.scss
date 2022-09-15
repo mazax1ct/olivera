@@ -1,0 +1,49 @@
+.contacts {
+    @media(min-width: $md) {
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    &__text {
+        margin-bottom: 22px;
+        @media(min-width: $md) {
+            margin-bottom: 0;
+            padding-left: 40px;
+            padding-right: 40px;
+            width: 50%;
+        }
+        @media(min-width: $fhd) {
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+
+        p {
+            &:not(:last-child) {
+                @media(min-width: $fhd) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+
+        b {
+            font-weight: 500;
+        }
+    }
+
+    &__image {
+        margin-left: -16px;
+        margin-right: -16px;
+        @media(min-width: $md) {
+            margin-left: 0;
+            margin-right: 0;
+            width: 50%;
+        }
+
+        img,
+        picture {
+            display: block;
+            width: 100%;
+        }
+    }
+}

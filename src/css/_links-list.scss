@@ -1,0 +1,63 @@
+.links-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+    @media(min-width: $md) {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    &__item {
+        margin-bottom: 58px;
+        padding-left: 4px;
+        padding-right: 4px;
+        width: 50%;
+        @media(min-width: $md) {
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 25%;
+        }
+    }
+
+    &__link {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        @media(min-width: $md) {
+            font-size: 14px;
+        }
+        @media(min-width: $lg) {
+            font-size: 16px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 20px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__image {
+        display: block;
+        margin-bottom: 12px;
+        width: 100%;
+        @media(min-width: $fhd) {
+            margin-bottom: 34px;
+        }
+
+        img {
+            border-radius: 12px;
+            width: 100%;
+            @media(min-width: $fhd) {
+                border-radius: 15px;
+            }
+        }
+    }
+
+    &__link-title {
+        display: block;
+    }
+}
