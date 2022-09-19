@@ -1,38 +1,18 @@
 .input-label {
     display: block;
-    /*&__text {
-        color: rgba(#fff, 0.7);
-        display: block;
-        font-size: 12px;
-        line-height: 1.33333;
-        margin-bottom: 4px;
-    }*/
+
     &__error {
         color: $error-color;
         display: block;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.1875;
-        margin-top: 12px;
+        margin-top: 9px;
+        padding-left: 26px;
         @media(min-width: $fhd) {
-            font-size: 0.834vw;
-            margin-top: 0.625vw;
+            padding-left: 34px;
         }
     }
-    /*&__input-container {
-        display: block;
-        position: relative;
 
-        svg {
-            fill: #fff;
-            height: 24px;
-            left: auto;
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 24px;
-        }
-    }*/
     &.error {
         .input-label__text {
             color: $error-color;
@@ -53,9 +33,6 @@
                 opacity: 1;
             }
         }
-        /*svg {
-            fill: #D43C38;
-        }*/
     }
 
     &.valid {
@@ -68,34 +45,29 @@
             border-color: $valid-color;
             color: $valid-color;
         }
-        /*svg {
-            fill: #5474B4;
-        }*/
     }
 }
 
 .input,
 .textarea {
-    border: none;
-    border-bottom: 2px solid $text-color;
-    border-radius: 0;
+    border: 1px solid #747474;
+    border-radius: 3px;
     background-color: transparent;
     color: $text-color;
-    font-size: 18px;
+    font-size: inherit;
     line-height: 1.33333;
-    padding: 16px 0;
+    padding: 0 26px;
     transition: border-color 0.3s;
     width: 100%;
     @media(min-width: $fhd) {
-        border-bottom-width: 0.105vw;
-        font-size: 0.938vw;
-        padding-top: 0.834vw;
-        padding-bottom: 0.834vw;
+        border-radius: 15px;
+        padding-left: 34px;
+        padding-right: 34px;
     }
 
     &:focus,
     &:hover {
-        //border-color: #fff;
+        border-color: #000;
     }
 
     &::placeholder {
@@ -109,12 +81,12 @@
     }
 
     &:focus::placeholder {
-        color: $text-color;
+        color: #989898;
         opacity: 1;
     }
 
     &:focus::-ms-input-placeholder {
-        color: $text-color;
+        color: #989898;
         opacity: 1;
     }
 
@@ -174,20 +146,18 @@ textarea {
 }
 
 .input {
-    height: 56px;
+    height: 55px;
     @media(min-width: $fhd) {
-        height: 2.917vw;
+        height: 66px;
     }
 }
 
 .textarea {
-    height: 130px;
+    height: 170px;
+    padding: 20px 34px;
     resize: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    @media(min-width: $fhd) {
-        height: 130px;
-    }
 
     &::-webkit-scrollbar {
         display: none;

@@ -14,9 +14,7 @@
 
     &--titled {
         display: block;
-        margin-left: -16px;
-        margin-right: -16px;
-        padding: 22px 16px;
+        padding: 22px 0;
         margin-bottom: 22px;
         @media(min-width: $md) {
             margin-bottom: 36px;
@@ -65,7 +63,7 @@
 
     h1 {
         margin-bottom: 0;
-        @media(min-width: $fhd) {
+        @media(min-width: $lg) {
             font-size: 24px;
         }
     }

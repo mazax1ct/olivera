@@ -1,0 +1,36 @@
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: block;
+    height: 40px;
+    width: 40px;
+    @media(min-width: $fhd) {
+        height: 56px;
+        width: 56px;
+    }
+
+    &:not(:last-child) {
+        margin-right: 24px;
+    }
+
+    svg {
+        fill: #000;
+        height: 40px;
+        transition: fill 0.3s;
+        width: 40px;
+        @media(min-width: $fhd) {
+            height: 56px;
+            width: 56px;
+        }
+    }
+
+    &:focus,
+    &:hover {
+        svg {
+            fill: #989898;
+        }
+    }
+}

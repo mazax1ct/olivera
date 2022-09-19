@@ -1,0 +1,47 @@
+.pager {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+    &__item {
+        margin: 5px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        align-items: center;
+        background-color: #000;
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        min-width: 40px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        width: 40px;
+
+        &.is-active {
+            background-color: #fff;
+            border: 1px solid #000;
+            color: #000;
+        }
+
+        &:not(.is-active) {
+            &:focus,
+            &:hover {
+                background-color: #989898;
+            }
+        }
+    }
+}

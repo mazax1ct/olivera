@@ -1,0 +1,18 @@
+.unsubscribe {
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+            @media(min-width: $fhd) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .input-label {
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Olivera</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="">
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="content">
+        <div class="bradpitt">
+            <div class="container">
+                <ul class="bradpitt__list">
+                    <li class="bradpitt__item"><a class="bradpitt__link" href="#">Главная</a></li>
+                    <li class="bradpitt__item">Управление подпиской</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="title">Управление подпиской</h1>
+
+            <p>Жаль, что вы больше не заинтересованы в нашей расслыке.</p>
+            <p>Чтобы исключить ваши контактные данные из списка рассылок, пожалуйста нажмите на кнопку “Отписаться”</p>
+            <p>
+                Мы будем благодарны, если вы <b>оставите короткий отзыв</b> о нашей расслылке.
+                Это позволит нам стать лучшими для вас.
+            </p>
+
+            <form class="unsubscribe" action="">
+                <p class="unsubscribe__title"><b>Отзыв:</b></p>
+                <label class="input-label">
+                    <textarea class="textarea"></textarea>
+                </label>
+                <button class="button" type="submit">Отписаться</button>
+            </form>
+
+            <p>
+                Не хотите получать письма?<br>
+                Следите за новыми акциями в социальных сетях!
+            </p>
+
+            <div class="socials">
+                <a class="social-link" href="#" title="Мы Вконтакте" target="_blank" rel="nofollow noreferrer">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#vk"></use>
+                    </svg>
+                </a>
+                <a class="social-link" href="#" title="Instagram" target="_blank" rel="nofollow noreferrer">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#inst"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    //= template/footer.html
+
+    //= template/scripts.html
+</body>
+
+</html>

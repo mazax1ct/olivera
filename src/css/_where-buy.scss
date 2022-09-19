@@ -1,0 +1,63 @@
+.where-buy {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+        @media(min-width: $fhd) {
+            margin-bottom: 124px;
+        }
+    }
+    @media(min-width: $hd) {
+        display: flex;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    &__column {
+        &:not(:last-child) {
+            margin-bottom: 38px;
+            @media(min-width: $hd) {
+                margin-bottom: 0;
+            }
+        }
+        @media(min-width: $hd) {
+            padding-left: 16px;
+            padding-right: 16px;
+            width: 50%;
+        }
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 22px;
+        text-align: center;
+        @media(min-width: $hd) {
+            margin-bottom: 35px;
+        }
+    }
+
+    picture {
+        display: block;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 38px;
+            @media(min-width: $fhd) {
+                margin-bottom: 49px;
+            }
+        }
+
+        img {
+            border-radius: 12px;
+            box-shadow: 0 4px 20px 0 rgba(#000, 0.03);
+            @media(min-width: $fhd) {
+                border-radius: 15px;
+            }
+        }
+    }
+
+    .arrow {
+        @media(max-width: $md - 1px) {
+            display: none;
+        }
+        text-align: center;
+    }
+}

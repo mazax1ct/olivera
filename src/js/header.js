@@ -1,3 +1,13 @@
+//вычисляем ширину скроллбара
+function scrollBarWidth() {
+  var scrollBarWidth = window.innerWidth-$(document).width();
+
+  if(scrollBarWidth > 0) {
+    $('body').addClass('compensate-for-scrollbar');
+    $('head').append('<style id="menu-open" type="text/css">.compensate-for-scrollbar{padding-right:'+scrollBarWidth+"px;}</style>")
+  }
+}
+
 var header = $('.header'),
     scrollPrev = 0;
 
@@ -56,6 +66,7 @@ $(document).on('click', '.js-main-menu-root', function () {
   if(!$(this).hasClass('is-open')) {
     $(this).addClass("is-open");
     if($('body').width() > 1023) {
+      scrollBarWidth();
       $('body').addClass('overflow');
       $(this).closest('.main-menu__list-item').find('.submenu').css('display', 'flex').hide().fadeIn(300, function() {
         setTimeout(function() {
@@ -91,8 +102,11 @@ $(document).on('click', '.js-submenu-closer', function () {
   setTimeout(function() {
     if($('body').width() > 1023) {
       $('.submenu').fadeOut(300, function () {
+        $('#menu-open').remove();
+        $('body').removeClass('compensate-for-scrollbar');
         $('body').removeClass('overflow');
       });
+
     } else {
       $('.submenu').slideToggle();
     }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>Olivera</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/fonts_preload.html
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="">
+    //= template/sprite.html
+
+    //= template/header.html
+
+    <main class="content">
+        <div class="bradpitt">
+            <div class="container">
+                <ul class="bradpitt__list">
+                    <li class="bradpitt__item"><a class="bradpitt__link" href="#">Главная</a></li>
+                    <li class="bradpitt__item">Сотрудничество</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="title">Сотрудничество</h1>
+
+            <div class="accordion">
+                <button class="js-accordion accordion__toggler" type="button">Для оптовых клиентов</button>
+                <div class="accordion__body">
+                    <p class="h2">ГОТОВЫ К СОТРУДНИЧЕСТВУ? ОСТАВЬТЕ ЗАЯВКУ</p>
+                    <p>
+                        Для получения информации об индивидуальных условиях для оптовых клиентов, заполните форму обратной связи.<br>
+                        Мы свяжемся с Вами в ближайшее время!
+                    </p>
+                    <form class="form" action="">
+                        <div class="form__column">
+                            <label class="input-label error">
+                                <input class="input" type="text" value="" placeholder="Ваше имя">
+                                <!--<span class="input-label__error">Введены неверные символы (!”№;%:?*1,.@~#)</span>-->
+                            </label>
+                            <label class="input-label">
+                                <input class="js-email-mask input" type="text" value="" placeholder="Email">
+                            </label>
+                            <label class="input-label">
+                                <input class="js-phone-mask input" type="text" value="" placeholder="Номер телефона">
+                            </label>
+                            <label class="input-label">
+                                <input class="input" type="text" value="" placeholder="Название фирмы">
+                            </label>
+                            <label class="input-label">
+                                <input class="input" type="text" value="" placeholder="Название юр.лица">
+                            </label>
+                        </div>
+                        <div class="form__column">
+                            <label class="input-label">
+                                <input class="input" type="text" value="" placeholder="ИНН">
+                            </label>
+                            <label class="input-label">
+                                <input class="input" type="text" value="" placeholder="КПП">
+                            </label>
+                            <label class="input-label">
+                                <input class="input" type="text" value="" placeholder="Юридический адрес">
+                            </label>
+                            <label class="input-label">
+                                <input class="input" type="text" value="" placeholder="Адрес доставки товара">
+                            </label>
+                            <div class="form__button-block">
+                                <button class="button" type="submit" disabled>Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="js-accordion accordion__toggler" type="button">Для блогеров</button>
+                <div class="accordion__body">
+                    <p>Мы рады сотрудничеству с лидерами мнений, блогерами, образовательными учреждениями, мероприятиями, соревнованиями и пр.</p>
+                    <p>Отправить предложения по сотрудничеству Вы можете на <a href="mailto:info@olivera.ru">info@olivera.ru</a></p>
+                    <p>Письмо должно содержать:</p>
+                    <ul>
+                        <li>тему письма «Предложение по сотрудничеству для ноль грамм»;</li>
+                        <li>условия сотрудничества;</li>
+                        <li>ссылки на ваши социальные сети;</li>
+                        <li>статистику ваших социальных сетей (ссылкой или скриншот).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    //= template/footer.html
+
+    //= template/scripts.html
+</body>
+
+</html>

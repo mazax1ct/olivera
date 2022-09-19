@@ -15,11 +15,10 @@
     //= template/fonts_preload.html
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/plugins/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="css/plugins/select2.css" />
 </head>
 
-<body class="">
+<body>
     //= template/sprite.html
 
     //= template/header.html
@@ -35,11 +34,233 @@
             </div>
         </div>
 
+        <div class="container">
+            <div class="section-filter">
+                <div class="section-filter__views">
+                    <a class="js-section-view section-filter__view is-active" href="#" title="Плиткой" data-view="view-tiles">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#tiles"></use>
+                        </svg>
+                    </a>
+                    <a class="js-section-view section-filter__view" href="#" title="Списком" data-view="view-list">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#list"></use>
+                        </svg>
+                    </a>
+                    <a class="js-section-view section-filter__view" href="#" title="Списком без описания" data-view="view-list_2">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#list_2"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="section-filter__selects">
+                    <div class="select-wrapper">
+                        <select class="js-select" data-placeholder="По популярности">
+                            <option></option>
+                            <option class="asc" value="1">По возрастанию</option>
+                            <option class="desc" value="2">По убыванию</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <select class="js-select" data-placeholder="По алфавиту">
+                            <option></option>
+                            <option class="asc" value="1">По возрастанию</option>
+                            <option class="desc" value="2">По убыванию</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products view-tiles">
+                <div class="products__item">
+                    <div class="product" href="#">
+                        <div class="product__image">
+                            <img src="images/content/products/img_1.jpg" srcset="images/content/products/img_1@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="product__title-block">
+                            <p class="product__title">Джем “Вишня”</p>
+                            <p class="product__weight">260 г</p>
+                        </div>
+                        <div class="product__preview">
+                            <p>
+                                Джем со вкусом вишни от 0 gramm - вкус детства! Только вспомните бабушкин вишнёвый джем, который она подавала к оладушкам, разлетавшимся за считанные минуты. Нам удалось сохранить те самые вкусовые качества, при этом
+                                сделать состав более здоровым. Сама ягода - вишня, помогает справляться с отёками, а также содержит мелатонин, из-за чего мы особенно рекомендуем есть наш джем вечером, никакого вреда для фигуры, а здоровый сон
+                                обеспечен!
+                            </p>
+                            <p>Намажьте джем на хлебец, добавьте его в кашу или в качестве топинга к сырникам.</p>
+                            <p>Даже заядлые любители сахара считают нашу продукцию исключительно вкусной - убедитесь сами!"</p>
+                        </div>
+                        <a class="product__link" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="product" href="#">
+                        <div class="product__image">
+                            <img src="images/content/products/img_2.jpg" srcset="images/content/products/img_2@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="product__title-block">
+                            <p class="product__title">Сироп “Банан”</p>
+                            <p class="product__weight">260 г</p>
+                        </div>
+                        <div class="product__preview">
+                            <p>
+                                Фруктовый десерт «Абрикос-апельсин» приготовлен исключительно из натуральных фруктов без консервантов и красителей.
+                            </p>
+                            <p>Гурманы несомненно оценят яркий вкус натурального абрикоса с тонкой ноткой апельсина, который придаёт десерту неповторимый нежный вкус. Впервые любители вкусняшек, придерживающиеся ПП, могут быть уверены, что они
+                                потребляют 100% натуральный, низкокалорийный продукт. Отсутствие консервантов нашим десертам обеспечивает уникальная производственная линия, не имеющая аналогов в России.</p>
+                            <p>После приготовления каждая баночка с наивкуснейшим содержимым проходит стерилизацию горячим паром, что и обеспечивает её сохранность."</p>
+                        </div>
+                        <a class="product__link" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="product" href="#">
+                        <div class="product__image">
+                            <img src="images/content/products/img_1.jpg" srcset="images/content/products/img_1@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="product__title-block">
+                            <p class="product__title">Длинное название товара для проверки вёрстки</p>
+                            <p class="product__weight">260 г</p>
+                        </div>
+                        <div class="product__preview">
+                            <p>
+                                Грушевый джем от 0 gramm с множеством фруктовых кусочков - идеальное дополнение к каше, тостам или йогурту! Сама груша достаточно сахариста, но в нашем джеме мы сочетаем её с натуральными сахарозаменителями, заботясь о
+                                вашем здоровье! Не упускайте возможность насладиться любимым фруктом, в котором содержится большинство групп витаминов.
+                            </p>
+                            <p>Даже заядлые любители сахара считают нашу продукцию исключительно вкусной - убедитесь сами!"</p>
+                        </div>
+                        <a class="product__link" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="product" href="#">
+                        <div class="product__image">
+                            <img src="images/content/products/img_1.jpg" srcset="images/content/products/img_1@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="product__title-block">
+                            <p class="product__title">Джем “Вишня”</p>
+                            <p class="product__weight">260 г</p>
+                        </div>
+                        <div class="product__preview">
+                            <p>
+                                Джем со вкусом вишни от 0 gramm - вкус детства! Только вспомните бабушкин вишнёвый джем, который она подавала к оладушкам, разлетавшимся за считанные минуты. Нам удалось сохранить те самые вкусовые качества, при этом
+                                сделать состав более здоровым. Сама ягода - вишня, помогает справляться с отёками, а также содержит мелатонин, из-за чего мы особенно рекомендуем есть наш джем вечером, никакого вреда для фигуры, а здоровый сон
+                                обеспечен!
+                            </p>
+                            <p>Намажьте джем на хлебец, добавьте его в кашу или в качестве топинга к сырникам.</p>
+                            <p>Даже заядлые любители сахара считают нашу продукцию исключительно вкусной - убедитесь сами!"</p>
+                        </div>
+                        <a class="product__link" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="product" href="#">
+                        <div class="product__image">
+                            <img src="images/content/products/img_1.jpg" srcset="images/content/products/img_1@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="product__title-block">
+                            <p class="product__title">Джем “Вишня”</p>
+                            <p class="product__weight">260 г</p>
+                        </div>
+                        <div class="product__preview">
+                            <p>
+                                Джем со вкусом вишни от 0 gramm - вкус детства! Только вспомните бабушкин вишнёвый джем, который она подавала к оладушкам, разлетавшимся за считанные минуты. Нам удалось сохранить те самые вкусовые качества, при этом
+                                сделать состав более здоровым. Сама ягода - вишня, помогает справляться с отёками, а также содержит мелатонин, из-за чего мы особенно рекомендуем есть наш джем вечером, никакого вреда для фигуры, а здоровый сон
+                                обеспечен!
+                            </p>
+                            <p>Намажьте джем на хлебец, добавьте его в кашу или в качестве топинга к сырникам.</p>
+                            <p>Даже заядлые любители сахара считают нашу продукцию исключительно вкусной - убедитесь сами!"</p>
+                        </div>
+                        <a class="product__link" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="product" href="#">
+                        <div class="product__image">
+                            <img src="images/content/products/img_1.jpg" srcset="images/content/products/img_1@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="product__title-block">
+                            <p class="product__title">Джем “Вишня”</p>
+                            <p class="product__weight">260 г</p>
+                        </div>
+                        <div class="product__preview">
+                            <p>
+                                Джем со вкусом вишни от 0 gramm - вкус детства! Только вспомните бабушкин вишнёвый джем, который она подавала к оладушкам, разлетавшимся за считанные минуты. Нам удалось сохранить те самые вкусовые качества, при этом
+                                сделать состав более здоровым. Сама ягода - вишня, помогает справляться с отёками, а также содержит мелатонин, из-за чего мы особенно рекомендуем есть наш джем вечером, никакого вреда для фигуры, а здоровый сон
+                                обеспечен!
+                            </p>
+                            <p>Намажьте джем на хлебец, добавьте его в кашу или в качестве топинга к сырникам.</p>
+                            <p>Даже заядлые любители сахара считают нашу продукцию исключительно вкусной - убедитесь сами!"</p>
+                        </div>
+                        <a class="product__link" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="product" href="#">
+                        <div class="product__image">
+                            <img src="images/content/products/img_1.jpg" srcset="images/content/products/img_1@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="product__title-block">
+                            <p class="product__title">Джем “Вишня”</p>
+                            <p class="product__weight">260 г</p>
+                        </div>
+                        <div class="product__preview">
+                            <p>
+                                Джем со вкусом вишни от 0 gramm - вкус детства! Только вспомните бабушкин вишнёвый джем, который она подавала к оладушкам, разлетавшимся за считанные минуты. Нам удалось сохранить те самые вкусовые качества, при этом
+                                сделать состав более здоровым. Сама ягода - вишня, помогает справляться с отёками, а также содержит мелатонин, из-за чего мы особенно рекомендуем есть наш джем вечером, никакого вреда для фигуры, а здоровый сон
+                                обеспечен!
+                            </p>
+                            <p>Намажьте джем на хлебец, добавьте его в кашу или в качестве топинга к сырникам.</p>
+                            <p>Даже заядлые любители сахара считают нашу продукцию исключительно вкусной - убедитесь сами!"</p>
+                        </div>
+                        <a class="product__link" href="#">Подробнее</a>
+                    </div>
+                </div>
+                <div class="products__item">
+                    <div class="product" href="#">
+                        <div class="product__image">
+                            <img src="images/content/products/img_1.jpg" srcset="images/content/products/img_1@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="product__title-block">
+                            <p class="product__title">Джем “Вишня”</p>
+                            <p class="product__weight">260 г</p>
+                        </div>
+                        <div class="product__preview">
+                            <p>
+                                Джем со вкусом вишни от 0 gramm - вкус детства! Только вспомните бабушкин вишнёвый джем, который она подавала к оладушкам, разлетавшимся за считанные минуты. Нам удалось сохранить те самые вкусовые качества, при этом
+                                сделать состав более здоровым. Сама ягода - вишня, помогает справляться с отёками, а также содержит мелатонин, из-за чего мы особенно рекомендуем есть наш джем вечером, никакого вреда для фигуры, а здоровый сон
+                                обеспечен!
+                            </p>
+                            <p>Намажьте джем на хлебец, добавьте его в кашу или в качестве топинга к сырникам.</p>
+                            <p>Даже заядлые любители сахара считают нашу продукцию исключительно вкусной - убедитесь сами!"</p>
+                        </div>
+                        <a class="product__link" href="#">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="pager">
+                <li class="pager__item"><a class="pager__link is-active">1</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">2</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">3</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">4</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">5</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">...</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">10</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">11</a></li>
+            </ul>
+        </div>
+
     </main>
 
     //= template/footer.html
-</body>
 
-//= template/scripts.html
+    //= template/scripts.html
+
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/select2-addon.js"></script>
+    <script src="js/section.js"></script>
+</body>
 
 </html>
