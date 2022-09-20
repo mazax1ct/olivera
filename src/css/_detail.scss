@@ -1,0 +1,225 @@
+.detail {
+    &__top {
+        margin-bottom: 40px;
+        @media(min-width: $sm) {
+            display: flex;
+        }
+        @media(min-width: $fhd) {
+            margin-bottom: 134px;
+        }
+    }
+
+    &__images {
+        margin-bottom: 44px;
+        @media(min-width: $sm) {
+            align-items: flex-start;
+            display: flex;
+            margin-bottom: 0;
+            width: 50%;
+        }
+    }
+
+    &__thumbs {
+        display: none;
+        @media(min-width: $sm) {
+            display: flex;
+            max-height: 330px;
+            width: 20%;
+        }
+        @media(min-width: $lg) {
+            max-height: 440px;
+        }
+        @media(min-width: $fhd) {
+            max-height: 680px;
+        }
+
+        .swiper-slide {
+            cursor: pointer;
+            padding: 1px;
+            @media(min-width: $sm) {
+                height: 100px !important;
+            }
+            @media(min-width: $fhd) {
+                height: 160px !important;
+            }
+
+            img {
+                border: 1px solid transparent;
+                height: 100%;
+            }
+        }
+
+        .swiper-slide-thumb-active {
+            img {
+                border-color: #000;
+            }
+        }
+    }
+
+    &__main-slider {
+        @media(min-width: $sm) {
+            width: 80%;
+        }
+
+        .swiper {
+            max-width: 67%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+        }
+
+        .swiper-pagination {
+            margin-top: 37px;
+            position: static;
+            @media(min-width: $sm) {
+                display: none;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            border: 1px solid #000;
+            background-color: transparent;
+            height: 12px;
+            opacity: 1;
+            width: 12px;
+        }
+
+        .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #000;
+        }
+    }
+
+    &__about {
+        @media(min-width: $sm) {
+            max-width: 650px;
+        }
+    }
+
+    &__brand {
+        @media(min-width: $fhd) {
+            font-size: 24px;
+        }
+
+        &:not(:last-child) {
+            @media(min-width: $fhd) {
+                margin-bottom: 39px;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        @media(min-width: $fhd) {
+            font-size: 40px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__short-desc {
+        @media(min-width: $fhd) {
+            font-size: 24px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 29px;
+        }
+    }
+
+    &__weight {
+        color: #585858;
+        @media(min-width: $md) {
+            text-align: right;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__text {
+        color: #585858;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 17px;
+        @media(min-width: $sm) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__button {
+        align-items: center;
+        border-radius: 7px;
+        color: #fff;
+        display: flex;
+        font-size: 20px;
+        font-weight: 500;
+        height: 46px;
+        justify-content: center;
+        margin-top: 19px;
+        max-width: 340px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        width: 100%;
+        @media(min-width: $sm) {
+            width: auto;
+        }
+
+        &:not(:last-child) {
+            @media(min-width: $sm) {
+                margin-right: 26px;
+            }
+        }
+
+        &--wildberries {
+            background: linear-gradient(270deg, #511177 0%, #CA11AA 100%);
+
+            &:focus,
+            &:hover {
+                background: linear-gradient(270deg, #CA11AA 0%, #511177 100%);
+            }
+        }
+
+        &--ozon {
+            background-color: #005BFE;
+
+            &:focus,
+            &:hover {
+                background-color: darken(#005BFE, 10%);
+            }
+        }
+    }
+
+    &__icons {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        @media(min-width: $fhd) {
+            margin-top: 59px;
+        }
+
+        img {
+            max-width: 128px;
+            width: 20%;
+        }
+    }
+}
