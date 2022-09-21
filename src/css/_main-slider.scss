@@ -1,0 +1,125 @@
+.main-slider {
+    margin-bottom: 40px;
+    @media(min-width: $fhd) {
+        margin-bottom: 64px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 30px;
+        display: none;
+        @media(min-width: $md) {
+            display: block;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        border: 1px solid #fff;
+        background-color: transparent;
+        height: 12px;
+        opacity: 1;
+        width: 12px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+}
+
+.main-banner {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+
+    img,
+    picture {
+        display: block;
+        width: 100%;
+    }
+
+    &__container {
+        left: 50%;
+        max-width: 1404px;
+        position: absolute;
+        padding-left: 38px;
+        padding-right: 38px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        @media(min-width: $sm) {
+            font-size: 30px;
+        }
+        @media(min-width: $md) {
+            font-size: 36px;
+        }
+        @media(min-width: $lg) {
+            font-size: 56px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 100px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+            @media(min-width: $fhd) {
+                margin-bottom: 33px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        @media(min-width: $sm) {
+            font-size: 30px;
+        }
+        @media(min-width: $md) {
+            font-size: 36px;
+        }
+        @media(min-width: $lg) {
+            font-size: 56px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 64px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+            @media(min-width: $fhd) {
+                margin-bottom: 33px;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 800;
+        @media(min-width: $sm) {
+            font-size: 18px;
+        }
+        @media(min-width: $md) {
+            font-size: 20px;
+        }
+        @media(min-width: $lg) {
+            font-size: 32px;
+        }
+        @media(min-width: $fhd) {
+            font-size: 48px;
+        }
+    }
+}

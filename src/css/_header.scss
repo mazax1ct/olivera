@@ -1,11 +1,33 @@
 .main-page {
     .header {
-        background-color: transparent;
+        background-color: #fff;
+        @media(min-width: $md) {
+            background-color: transparent;
+        }
 
         .header__button {
             svg {
-                fill: #fff;
+                fill: #000;
+                @media(min-width: $md) {
+                    fill: #fff;
+                }
             }
+        }
+
+        &.scrolled {
+            background-color: #000;
+
+            .header__button {
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    .header-search {
+        @media(min-width: $md) {
+            border-color: transparent;
         }
     }
 }
@@ -355,8 +377,8 @@
 }
 
 .header-search {
-    border-radius: 4px;
     border: 1px solid #000;
+    border-radius: 4px;
     display: none;
     flex-grow: 1;
     max-width: 570px;

@@ -16,23 +16,32 @@
     }
 
     &:not(:last-child) {
-        margin-bottom: 82px;
+        margin-bottom: 40px;
+        @media(min-width: $fhd) {
+            margin-bottom: 82px;
+        }
     }
 
     &__item {
         &:not(:last-child) {
-            margin-right: 136px;
+            margin-right: 50px;
+            @media(min-width: $fhd) {
+                margin-right: 136px;
+            }
         }
     }
 
     &__link {
         display: block;
-        font-size: 36px;
+        font-size: 24px;
         font-weight: 500;
         padding-bottom: 16px;
         position: relative;
         text-decoration: none;
         z-index: 0;
+        @media(min-width: $fhd) {
+            font-size: 36px;
+        }
 
         &.is-active {
             &::after {
@@ -42,8 +51,11 @@
                 left: 0;
                 position: absolute;
                 top: 100%;
-                width: 129px;
+                width: 80px;
                 z-index: 1;
+                @media(min-width: $fhd) {
+                    width: 129px;
+                }
             }
         }
     }

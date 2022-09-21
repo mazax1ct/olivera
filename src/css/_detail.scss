@@ -1,4 +1,8 @@
 .detail {
+    @media(min-width: $fhd) {
+        padding-top: 100px;
+    }
+
     &__top {
         margin-bottom: 40px;
         @media(min-width: $sm) {
