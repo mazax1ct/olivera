@@ -1,0 +1,110 @@
+.blog-slider {
+    margin-left: -16px;
+    margin-right: -16px;
+    @media(min-width: 992px) {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .swiper-wrapper {
+        @media(min-width: 992px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        margin-top: 25px;
+        position: static;
+        @media(min-width: $hd) {
+            margin-top: 38px;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        border: 1px solid #000;
+        background-color: transparent;
+        height: 12px;
+        opacity: 1;
+        width: 12px;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #000;
+    }
+
+    .swiper-slide {
+        @media(min-width: 992px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &:not(:last-child) {
+            @media(min-width: 992px) {
+                margin-bottom: 20px;
+            }
+            @media(min-width: $fhd) {
+                margin-bottom: 46px;
+            }
+        }
+
+        &.type_1 {
+            @media(min-width: 992px) {
+                width: 50% !important;
+            }
+        }
+
+        &.type_2 {
+            @media(min-width: 992px) {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.blog-item {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    @media(min-width: $fhd) {
+        font-size: 20px;
+    }
+
+    &:focus,
+    &:hover {
+        img {
+            transform: scale(1.01);
+        }
+    }
+
+    &__image {
+        display: block;
+        margin-bottom: 16px;
+
+        img {
+            min-height: 328px;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+    }
+
+    &__title {
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media(min-width: 992px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

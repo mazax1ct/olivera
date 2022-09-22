@@ -1,0 +1,32 @@
+.shops-links {
+    background-color: #F5F5F5;
+    margin-bottom: 64px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media(min-width: $sm) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    @media(min-width: $lg) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @media(min-width: $fhd) {
+        padding-top: 66px;
+        padding-bottom: 66px;
+    }
+}
+
+.infinite-scroller {
+    .swiper-slide {
+        align-items: center;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        width: auto !important;
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+}

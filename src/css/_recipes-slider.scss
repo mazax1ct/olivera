@@ -1,17 +1,14 @@
-.hits {
-    max-width: 1540px;
-    margin-left: auto;
-    margin-right: auto;
+.recipes-slider {
     margin-bottom: 64px;
 
     .swiper-horizontal > .swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        margin-top: 20px;
+        margin-top: 25px;
         position: static;
         @media(min-width: $hd) {
-            display: none;
+            margin-top: 38px;
         }
     }
 
@@ -32,43 +29,65 @@
     .swiper-pagination-bullet-active {
         background-color: #000;
     }
+
+    .swiper-slide {
+        @media(min-width: 992px) {
+            width: auto !important;
+        }
+    }
 }
 
-.hit {
+.recipe {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     text-decoration: none;
 
     &:focus,
     &:hover {
         img {
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
     }
 
-    &__image {
+    &__image,
+    &__text,
+    &__title {
         display: block;
+    }
+
+    &__image {
         margin-bottom: 16px;
 
         img {
+            min-height: 328px;
+            object-fit: cover;
+            object-position: center;
             transform: scale(1);
             transition: transform 0.3s;
         }
     }
 
     &__title {
-        display: block;
-        font-size: 16px;
-
-        &:not(:last-child) {
-            margin-bottom: 12px;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media(min-width: $md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @media(min-width: $fhd) {
+            font-size: 48px;
         }
     }
 
-    &__price {
-        display: block;
-        font-size: 20px;
-        font-weight: 600;
+    &__text {
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media(min-width: $md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

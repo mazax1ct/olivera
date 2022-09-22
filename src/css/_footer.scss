@@ -24,13 +24,16 @@
     &__inner {
         margin-left: auto;
         margin-right: auto;
-        max-width: 1744px;
+        max-width: 1394px;
         padding-left: 32px;
         padding-right: 32px;
         @media(min-width: $md) {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+        }
+        @media(min-width: $fhd) {
+            max-width: 1744px;
         }
     }
 
