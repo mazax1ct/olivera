@@ -4,6 +4,7 @@ if($('body').width() < 992) {
 
     pagination: {
       el: '.swiper-pagination',
+      clickable: true
     }
   });
 }

@@ -1,11 +1,11 @@
 //удаление класса по маске
 (function($) {
-    $.fn.removeClassWild = function(mask) {
-        return this.removeClass(function(index, cls) {
-            var re = mask.replace(/\*/g, '\\S+');
-            return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
-        });
-    };
+  $.fn.removeClassWild = function(mask) {
+    return this.removeClass(function(index, cls) {
+      var re = mask.replace(/\*/g, '\\S+');
+      return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
+    });
+  };
 })(jQuery);
 
 //аккордион
@@ -17,7 +17,6 @@ $(document).on('click', '.js-accordion', function () {
 
 //табы
 $(document).on('click', '.js-tab-toggler', function () {
-
   if(!$(this).hasClass('is-active')) {
     $('.tabs-nav__link').removeClass('is-active');
     $(this).closest('.tabs').find('.tabs-nav').find('.tabs-nav__item').eq($(this).closest('.tab').index()).find('.tabs-nav__link').addClass('is-active');
@@ -39,16 +38,9 @@ $(document).on('click', '.js-tab-toggler', function () {
 });
 
 $(document).on('click', '.js-tab-opener', function () {
-
   $('.js-tab-opener').removeClass('is-active');
   $(this).addClass('is-active');
-
-
   $(this).closest('.tabs').find('.tab').removeClass('is-active');
   $(this).closest('.tabs').find('.tabs__list').find('.tab').eq($(this).closest('.tabs-nav__item').index()).addClass('is-active');
-
-
-
-
   return false;
 });

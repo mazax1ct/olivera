@@ -4,6 +4,7 @@ const hits = new Swiper('.js-hits', {
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true
   },
 
   breakpoints: {

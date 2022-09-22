@@ -1,24 +1,24 @@
-var swiperOptions = {
+const infiniteSlider = new Swiper('.js-infinite-scroller', {
   loop: true,
   freeMode: false,
   spaceBetween: 10,
   grabCursor: false,
   slidesPerView: 5,
-  loop: true,
   autoplay: {
     delay: 1,
-    disableOnInteraction: true
+    disableOnInteraction: false
   },
   speed: 5000,
   freeModeMomentum: false,
   followFinger: false,
   allowTouchMove: false,
+  slideToClickedSlide: false,
+  pauseOnMouseEnter: false,
+  a11y: false,
   breakpoints: {
     1024: {
       slidesPerView: 7,
       spaceBetween: 50,
     }
   }
-};
-
-var swiper = new Swiper(".js-infinite-scroller", swiperOptions);
+});

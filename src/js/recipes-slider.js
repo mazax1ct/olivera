@@ -8,6 +8,7 @@ const recipesSlider = new Swiper('.js-recipes-slider', {
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true
   },
 
   breakpoints: {

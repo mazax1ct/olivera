@@ -3,5 +3,6 @@ const mainSlider = new Swiper('.js-main-slider', {
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true
   }
 });
